@@ -47,6 +47,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomCBB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomCBB.Designer.cs">
+      <DependentUpon>CustomCBB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomDatePicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomDatePicker.Designer.cs">
+      <DependentUpon>CustomDatePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomDropDownMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DemoDataGriviewImportImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoDataGriviewImportImage.Designer.cs">
+      <DependentUpon>DemoDataGriviewImportImage.cs</DependentUpon>
+    </Compile>
     <Compile Include="ElipseControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -56,24 +83,63 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainSeller.Designer.cs">
+      <DependentUpon>MainSeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuColorTable.cs" />
+    <Compile Include="MenuRenderer.cs" />
+    <Compile Include="MenuStripTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuStripTest.Designer.cs">
+      <DependentUpon>MenuStripTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Table.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Table.Designer.cs">
+      <DependentUpon>Table.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CustomCBB.resx">
+      <DependentUpon>CustomCBB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomDatePicker.resx">
+      <DependentUpon>CustomDatePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemoDataGriviewImportImage.resx">
+      <DependentUpon>DemoDataGriviewImportImage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainSeller.resx">
+      <DependentUpon>MainSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuStripTest.resx">
+      <DependentUpon>MenuStripTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="Table.resx">
+      <DependentUpon>Table.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -82,6 +148,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LightCalendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkCalendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stairs32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-right %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurant32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkedGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uncheckedRed.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
