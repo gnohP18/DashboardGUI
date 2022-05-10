@@ -30,36 +30,59 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainSeller));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbStatus = new DashboardGUI.CustomComboBox();
+            this.cbbStatus1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnFloor2 = new System.Windows.Forms.Button();
             this.btnFloor1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnLeftPage = new System.Windows.Forms.Button();
-            this.btnRightPage = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.table1 = new DashboardGUI.Table();
-            this.table2 = new DashboardGUI.Table();
-            this.table3 = new DashboardGUI.Table();
-            this.table4 = new DashboardGUI.Table();
-            this.table5 = new DashboardGUI.Table();
-            this.table6 = new DashboardGUI.Table();
-            this.table7 = new DashboardGUI.Table();
-            this.table8 = new DashboardGUI.Table();
-            this.table9 = new DashboardGUI.Table();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.panel1.Controls.Add(this.cbbStatus);
+            this.panel1.Controls.Add(this.cbbStatus1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1282, 105);
             this.panel1.TabIndex = 8;
+            // 
+            // cbbStatus
+            // 
+            this.cbbStatus.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbbStatus.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbbStatus.BorderSize = 1;
+            this.cbbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbbStatus.ForeColor = System.Drawing.Color.DimGray;
+            this.cbbStatus.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbbStatus.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbbStatus.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbbStatus.Location = new System.Drawing.Point(543, 42);
+            this.cbbStatus.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbbStatus.Name = "cbbStatus";
+            this.cbbStatus.Padding = new System.Windows.Forms.Padding(1);
+            this.cbbStatus.Size = new System.Drawing.Size(200, 30);
+            this.cbbStatus.TabIndex = 2;
+            this.cbbStatus.Texts = "";
+            this.cbbStatus.OnSelectedIndexChanged += new System.EventHandler(this.cbbStatus_SelectedValueChanged);
+            // 
+            // cbbStatus1
+            // 
+            this.cbbStatus1.FormattingEnabled = true;
+            this.cbbStatus1.Location = new System.Drawing.Point(852, 44);
+            this.cbbStatus1.Name = "cbbStatus1";
+            this.cbbStatus1.Size = new System.Drawing.Size(167, 24);
+            this.cbbStatus1.TabIndex = 1;
+            this.cbbStatus1.SelectedIndexChanged += new System.EventHandler(this.cbbStatus_OnSelectedIndexChanged);
+            this.cbbStatus1.SelectedValueChanged += new System.EventHandler(this.cbbStatus_SelectedValueChanged);
             // 
             // label2
             // 
@@ -99,6 +122,7 @@
             this.btnExit.Size = new System.Drawing.Size(33, 33);
             this.btnExit.TabIndex = 15;
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnFloor2
             // 
@@ -149,148 +173,15 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // btnLeftPage
-            // 
-            this.btnLeftPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnLeftPage.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnLeftPage.FlatAppearance.BorderSize = 0;
-            this.btnLeftPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLeftPage.Image = global::DashboardGUI.Properties.Resources.arrow_right__1_;
-            this.btnLeftPage.Location = new System.Drawing.Point(0, 105);
-            this.btnLeftPage.Name = "btnLeftPage";
-            this.btnLeftPage.Size = new System.Drawing.Size(75, 648);
-            this.btnLeftPage.TabIndex = 12;
-            this.btnLeftPage.UseVisualStyleBackColor = false;
-            // 
-            // btnRightPage
-            // 
-            this.btnRightPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnRightPage.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnRightPage.FlatAppearance.BorderSize = 0;
-            this.btnRightPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRightPage.Image = global::DashboardGUI.Properties.Resources.arrow_right;
-            this.btnRightPage.Location = new System.Drawing.Point(1207, 105);
-            this.btnRightPage.Name = "btnRightPage";
-            this.btnRightPage.Size = new System.Drawing.Size(75, 648);
-            this.btnRightPage.TabIndex = 10;
-            this.btnRightPage.UseVisualStyleBackColor = false;
-            // 
             // panel2
             // 
+            this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.panel2.Controls.Add(this.table7);
-            this.panel2.Controls.Add(this.table8);
-            this.panel2.Controls.Add(this.table9);
-            this.panel2.Controls.Add(this.table4);
-            this.panel2.Controls.Add(this.table5);
-            this.panel2.Controls.Add(this.table6);
-            this.panel2.Controls.Add(this.table3);
-            this.panel2.Controls.Add(this.table2);
-            this.panel2.Controls.Add(this.table1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 105);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1282, 648);
             this.panel2.TabIndex = 14;
-            // 
-            // table1
-            // 
-            this.table1.BackColor = System.Drawing.Color.White;
-            this.table1.Floor = 0;
-            this.table1.IDTable = 0;
-            this.table1.Location = new System.Drawing.Point(158, 6);
-            this.table1.Name = "table1";
-            this.table1.Size = new System.Drawing.Size(300, 200);
-            this.table1.statusTable = false;
-            this.table1.TabIndex = 0;
-            // 
-            // table2
-            // 
-            this.table2.BackColor = System.Drawing.Color.White;
-            this.table2.Floor = 0;
-            this.table2.IDTable = 0;
-            this.table2.Location = new System.Drawing.Point(483, 6);
-            this.table2.Name = "table2";
-            this.table2.Size = new System.Drawing.Size(300, 200);
-            this.table2.statusTable = false;
-            this.table2.TabIndex = 1;
-            // 
-            // table3
-            // 
-            this.table3.BackColor = System.Drawing.Color.White;
-            this.table3.Floor = 0;
-            this.table3.IDTable = 0;
-            this.table3.Location = new System.Drawing.Point(813, 6);
-            this.table3.Name = "table3";
-            this.table3.Size = new System.Drawing.Size(300, 200);
-            this.table3.statusTable = false;
-            this.table3.TabIndex = 2;
-            // 
-            // table4
-            // 
-            this.table4.BackColor = System.Drawing.Color.White;
-            this.table4.Floor = 0;
-            this.table4.IDTable = 0;
-            this.table4.Location = new System.Drawing.Point(813, 222);
-            this.table4.Name = "table4";
-            this.table4.Size = new System.Drawing.Size(300, 200);
-            this.table4.statusTable = false;
-            this.table4.TabIndex = 5;
-            // 
-            // table5
-            // 
-            this.table5.BackColor = System.Drawing.Color.White;
-            this.table5.Floor = 0;
-            this.table5.IDTable = 0;
-            this.table5.Location = new System.Drawing.Point(483, 222);
-            this.table5.Name = "table5";
-            this.table5.Size = new System.Drawing.Size(300, 200);
-            this.table5.statusTable = false;
-            this.table5.TabIndex = 4;
-            // 
-            // table6
-            // 
-            this.table6.BackColor = System.Drawing.Color.White;
-            this.table6.Floor = 0;
-            this.table6.IDTable = 0;
-            this.table6.Location = new System.Drawing.Point(158, 222);
-            this.table6.Name = "table6";
-            this.table6.Size = new System.Drawing.Size(300, 200);
-            this.table6.statusTable = false;
-            this.table6.TabIndex = 3;
-            // 
-            // table7
-            // 
-            this.table7.BackColor = System.Drawing.Color.White;
-            this.table7.Floor = 0;
-            this.table7.IDTable = 0;
-            this.table7.Location = new System.Drawing.Point(813, 437);
-            this.table7.Name = "table7";
-            this.table7.Size = new System.Drawing.Size(300, 200);
-            this.table7.statusTable = false;
-            this.table7.TabIndex = 8;
-            // 
-            // table8
-            // 
-            this.table8.BackColor = System.Drawing.Color.White;
-            this.table8.Floor = 0;
-            this.table8.IDTable = 0;
-            this.table8.Location = new System.Drawing.Point(483, 437);
-            this.table8.Name = "table8";
-            this.table8.Size = new System.Drawing.Size(300, 200);
-            this.table8.statusTable = false;
-            this.table8.TabIndex = 7;
-            // 
-            // table9
-            // 
-            this.table9.BackColor = System.Drawing.Color.White;
-            this.table9.Floor = 0;
-            this.table9.IDTable = 0;
-            this.table9.Location = new System.Drawing.Point(158, 437);
-            this.table9.Name = "table9";
-            this.table9.Size = new System.Drawing.Size(300, 200);
-            this.table9.statusTable = false;
-            this.table9.TabIndex = 6;
             // 
             // MainSeller
             // 
@@ -303,14 +194,15 @@
             this.Controls.Add(this.btnFloor2);
             this.Controls.Add(this.btnFloor1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnLeftPage);
-            this.Controls.Add(this.btnRightPage);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainSeller";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainSeller";
+            this.Load += new System.EventHandler(this.MainSeller_Load);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,17 +217,8 @@
         private System.Windows.Forms.Button btnFloor2;
         private System.Windows.Forms.Button btnFloor1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnLeftPage;
-        private System.Windows.Forms.Button btnRightPage;
         private System.Windows.Forms.Panel panel2;
-        private Table table7;
-        private Table table8;
-        private Table table9;
-        private Table table4;
-        private Table table5;
-        private Table table6;
-        private Table table3;
-        private Table table2;
-        private Table table1;
+        private System.Windows.Forms.ComboBox cbbStatus1;
+        private CustomComboBox cbbStatus;
     }
 }

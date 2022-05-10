@@ -1,6 +1,6 @@
 ﻿namespace DashboardGUI
 {
-    partial class Table
+    partial class TableView
     {
         /// <summary> 
         /// Required designer variable.
@@ -100,6 +100,7 @@
             this.btnPay.Size = new System.Drawing.Size(35, 35);
             this.btnPay.TabIndex = 7;
             this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // btnMenuOrder
             // 
@@ -111,6 +112,7 @@
             this.btnMenuOrder.Size = new System.Drawing.Size(35, 35);
             this.btnMenuOrder.TabIndex = 6;
             this.btnMenuOrder.UseVisualStyleBackColor = true;
+            this.btnMenuOrder.Click += new System.EventHandler(this.btnMenuOrder_Click);
             // 
             // Table
             // 

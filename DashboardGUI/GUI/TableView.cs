@@ -3,13 +3,13 @@ using System.Windows.Forms;
 
 namespace DashboardGUI
 {
-    public partial class Table : UserControl
+    public partial class TableView : UserControl
     {
         public int IDTable { get; set; }
         public int Floor { get; set; }
         public bool statusTable { get; set; }
 
-        public Table()
+        public TableView()
         {
             InitializeComponent();
         }
@@ -27,6 +27,22 @@ namespace DashboardGUI
             {
                 pBStatusTable.Image = Properties.Resources.uncheckedRed;
             }
+        }
+        public void SetLocation(int x, int y)
+        {
+            Location = new Point(x, y);
+        }
+
+        private void btnMenuOrder_Click(object sender, System.EventArgs e)
+        {
+            CustomDatePicker frm = new CustomDatePicker();
+            frm.Show();
+        }
+
+        private void btnPay_Click(object sender, System.EventArgs e)
+        {
+            Form1 frm = new Form1();
+            frm.Show();
         }
     }
 }
