@@ -47,7 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\QLMonAnBLL.cs" />
     <Compile Include="BLL\QLTableBLL.cs" />
+    <Compile Include="DAL\DataMonAnTest.cs" />
+    <Compile Include="BLL\QLDanhSachMonAnBLL.cs" />
+    <Compile Include="DTO\ChiTietHoaDon.cs" />
+    <Compile Include="DTO\ChiTietMonAn.cs" />
+    <Compile Include="DTO\HoaDon.cs" />
+    <Compile Include="DTO\MonAn.cs" />
     <Compile Include="DTO\TableTest.cs" />
     <Compile Include="CustomCBB.cs">
       <SubType>Form</SubType>
@@ -86,11 +93,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Dish.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Dish.Designer.cs">
+      <DependentUpon>Dish.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\MainSeller.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\MainSeller.Designer.cs">
       <DependentUpon>MainSeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PayForm.Designer.cs">
+      <DependentUpon>PayForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuColorTable.cs" />
     <Compile Include="MenuRenderer.cs" />
@@ -120,8 +145,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dish.resx">
+      <DependentUpon>Dish.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainSeller.resx">
       <DependentUpon>MainSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PayForm.resx">
+      <DependentUpon>PayForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuStripTest.resx">
       <DependentUpon>MenuStripTest.cs</DependentUpon>
@@ -185,6 +219,14 @@
   <ItemGroup>
     <None Include="Resources\uncheckedRed.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\salad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\water.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

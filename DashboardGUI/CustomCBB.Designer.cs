@@ -31,6 +31,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.customComboBox1 = new DashboardGUI.CustomComboBox();
+            this.txtDemo = new System.Windows.Forms.TextBox();
+            this.lbltextsearch = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -40,7 +42,7 @@
             this.pictureBox2.Image = global::DashboardGUI.Properties.Resources.DarkCalendar;
             this.pictureBox2.Location = new System.Drawing.Point(524, 88);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.Size = new System.Drawing.Size(16, 16);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -50,7 +52,7 @@
             this.pictureBox1.Image = global::DashboardGUI.Properties.Resources.LightCalendar;
             this.pictureBox1.Location = new System.Drawing.Point(459, 88);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -59,7 +61,6 @@
             // 
             this.customComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.customComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.customComboBox1.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.customComboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.customComboBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.customComboBox1.BorderSize = 2;
@@ -93,12 +94,32 @@
             this.customComboBox1.TabIndex = 0;
             this.customComboBox1.Texts = "";
             // 
+            // txtDemo
+            // 
+            this.txtDemo.Location = new System.Drawing.Point(416, 201);
+            this.txtDemo.Name = "txtDemo";
+            this.txtDemo.Size = new System.Drawing.Size(100, 22);
+            this.txtDemo.TabIndex = 3;
+            this.txtDemo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // lbltextsearch
+            // 
+            this.lbltextsearch.AutoSize = true;
+            this.lbltextsearch.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbltextsearch.Location = new System.Drawing.Point(256, 204);
+            this.lbltextsearch.Name = "lbltextsearch";
+            this.lbltextsearch.Size = new System.Drawing.Size(44, 16);
+            this.lbltextsearch.TabIndex = 4;
+            this.lbltextsearch.Text = "label1";
+            // 
             // CustomCBB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(16)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbltextsearch);
+            this.Controls.Add(this.txtDemo);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.customComboBox1);
@@ -117,5 +138,7 @@
         private CustomComboBox customComboBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox txtDemo;
+        private System.Windows.Forms.Label lbltextsearch;
     }
 }

@@ -47,12 +47,12 @@ namespace DashboardGUI.BLL
             };
         }
 
-        public int NumberOfStatus(bool st)
+        public int NumberOfStatusAndFloor(bool st, int fl)
         {
             int dem = 0;
             foreach (TableTest i in GetAllTable())
             {
-                if (i.Status.Equals(st))
+                if (i.Status.Equals(st) && i.Floor.Equals(fl))
                     dem++;
             }
             return dem;
@@ -80,12 +80,22 @@ namespace DashboardGUI.BLL
             }
             return data;
         }
-        public List<string> GetListTableStatus2(bool st)
+        public List<string> GetListTableStatusAndFloor(bool st, int fl)
         {
             List<string> data = new List<string>();
             foreach (TableTest i in GetAllTable())
             {
-                if (i.Status.Equals(st))
+                if (i.Status.Equals(st) && i.Floor.Equals(fl))
+                    data.Add(i.IDTable.ToString());
+            }
+            return data;
+        }
+        public List<string> GetAllTableWithFloor(int fl)
+        {
+            List<string> data = new List<string>();
+            foreach (TableTest i in GetAllTable())
+            {
+                if (i.Floor.Equals(fl))
                     data.Add(i.IDTable.ToString());
             }
             return data;

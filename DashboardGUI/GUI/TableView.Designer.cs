@@ -45,7 +45,7 @@
             this.panel1.Controls.Add(this.lblIDTable);
             this.panel1.Location = new System.Drawing.Point(7, 44);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(243, 148);
+            this.panel1.Size = new System.Drawing.Size(185, 148);
             this.panel1.TabIndex = 10;
             // 
             // lblIDTable
@@ -53,7 +53,7 @@
             this.lblIDTable.AutoSize = true;
             this.lblIDTable.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIDTable.ForeColor = System.Drawing.Color.Black;
-            this.lblIDTable.Location = new System.Drawing.Point(93, 56);
+            this.lblIDTable.Location = new System.Drawing.Point(78, 56);
             this.lblIDTable.Name = "lblIDTable";
             this.lblIDTable.Size = new System.Drawing.Size(37, 34);
             this.lblIDTable.TabIndex = 6;
@@ -83,7 +83,7 @@
             // 
             // pBStatusTable
             // 
-            this.pBStatusTable.Location = new System.Drawing.Point(260, 45);
+            this.pBStatusTable.Location = new System.Drawing.Point(204, 45);
             this.pBStatusTable.Name = "pBStatusTable";
             this.pBStatusTable.Size = new System.Drawing.Size(32, 32);
             this.pBStatusTable.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -95,9 +95,9 @@
             this.btnPay.FlatAppearance.BorderSize = 0;
             this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPay.Image = global::DashboardGUI.Properties.Resources.calculator;
-            this.btnPay.Location = new System.Drawing.Point(260, 152);
+            this.btnPay.Location = new System.Drawing.Point(199, 149);
             this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(35, 35);
+            this.btnPay.Size = new System.Drawing.Size(40, 40);
             this.btnPay.TabIndex = 7;
             this.btnPay.UseVisualStyleBackColor = true;
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
@@ -107,14 +107,14 @@
             this.btnMenuOrder.FlatAppearance.BorderSize = 0;
             this.btnMenuOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuOrder.Image = global::DashboardGUI.Properties.Resources.restaurant32;
-            this.btnMenuOrder.Location = new System.Drawing.Point(260, 100);
+            this.btnMenuOrder.Location = new System.Drawing.Point(198, 94);
             this.btnMenuOrder.Name = "btnMenuOrder";
-            this.btnMenuOrder.Size = new System.Drawing.Size(35, 35);
+            this.btnMenuOrder.Size = new System.Drawing.Size(40, 40);
             this.btnMenuOrder.TabIndex = 6;
             this.btnMenuOrder.UseVisualStyleBackColor = true;
             this.btnMenuOrder.Click += new System.EventHandler(this.btnMenuOrder_Click);
             // 
-            // Table
+            // TableView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
@@ -124,8 +124,8 @@
             this.Controls.Add(this.pBStatusTable);
             this.Controls.Add(this.btnPay);
             this.Controls.Add(this.btnMenuOrder);
-            this.Name = "Table";
-            this.Size = new System.Drawing.Size(300, 200);
+            this.Name = "TableView";
+            this.Size = new System.Drawing.Size(250, 200);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBStatusTable)).EndInit();

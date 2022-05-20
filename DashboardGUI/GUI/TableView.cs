@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using DashboardGUI.GUI;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace DashboardGUI
@@ -35,7 +36,7 @@ namespace DashboardGUI
 
         private void btnMenuOrder_Click(object sender, System.EventArgs e)
         {
-            CustomDatePicker frm = new CustomDatePicker();
+            OrderForm frm = new OrderForm();
             frm.Show();
         }
 

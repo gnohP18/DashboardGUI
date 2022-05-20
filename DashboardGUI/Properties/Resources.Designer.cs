@@ -113,6 +113,16 @@ namespace DashboardGUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dish {
+            get {
+                object obj = ResourceManager.GetObject("dish", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LightCalendar {
             get {
                 object obj = ResourceManager.GetObject("LightCalendar", resourceCulture);
@@ -126,6 +136,16 @@ namespace DashboardGUI.Properties {
         internal static System.Drawing.Bitmap restaurant32 {
             get {
                 object obj = ResourceManager.GetObject("restaurant32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap salad {
+            get {
+                object obj = ResourceManager.GetObject("salad", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +176,16 @@ namespace DashboardGUI.Properties {
         internal static System.Drawing.Bitmap uncheckedRed {
             get {
                 object obj = ResourceManager.GetObject("uncheckedRed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap water {
+            get {
+                object obj = ResourceManager.GetObject("water", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

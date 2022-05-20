@@ -30,8 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainSeller));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbbStatus = new DashboardGUI.CustomComboBox();
-            this.cbbStatus1 = new System.Windows.Forms.ComboBox();
+            this.cbbStatus = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
@@ -47,42 +46,23 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.panel1.Controls.Add(this.cbbStatus);
-            this.panel1.Controls.Add(this.cbbStatus1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1282, 105);
+            this.panel1.Size = new System.Drawing.Size(1300, 100);
             this.panel1.TabIndex = 8;
             // 
             // cbbStatus
             // 
-            this.cbbStatus.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cbbStatus.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbbStatus.BorderSize = 1;
-            this.cbbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cbbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cbbStatus.ForeColor = System.Drawing.Color.DimGray;
-            this.cbbStatus.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbbStatus.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbbStatus.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbbStatus.Location = new System.Drawing.Point(543, 42);
-            this.cbbStatus.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbbStatus.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbbStatus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbStatus.FormattingEnabled = true;
+            this.cbbStatus.Location = new System.Drawing.Point(852, 44);
             this.cbbStatus.Name = "cbbStatus";
-            this.cbbStatus.Padding = new System.Windows.Forms.Padding(1);
-            this.cbbStatus.Size = new System.Drawing.Size(200, 30);
-            this.cbbStatus.TabIndex = 2;
-            this.cbbStatus.Texts = "";
-            this.cbbStatus.OnSelectedIndexChanged += new System.EventHandler(this.cbbStatus_SelectedValueChanged);
-            // 
-            // cbbStatus1
-            // 
-            this.cbbStatus1.FormattingEnabled = true;
-            this.cbbStatus1.Location = new System.Drawing.Point(852, 44);
-            this.cbbStatus1.Name = "cbbStatus1";
-            this.cbbStatus1.Size = new System.Drawing.Size(167, 24);
-            this.cbbStatus1.TabIndex = 1;
-            this.cbbStatus1.SelectedIndexChanged += new System.EventHandler(this.cbbStatus_OnSelectedIndexChanged);
-            this.cbbStatus1.SelectedValueChanged += new System.EventHandler(this.cbbStatus_SelectedValueChanged);
+            this.cbbStatus.Size = new System.Drawing.Size(167, 24);
+            this.cbbStatus.TabIndex = 1;
+            this.cbbStatus.SelectedIndexChanged += new System.EventHandler(this.cbbStatus_OnSelectedIndexChanged);
+            this.cbbStatus.SelectedValueChanged += new System.EventHandler(this.cbbStatus_SelectedValueChanged);
             // 
             // label2
             // 
@@ -178,16 +158,16 @@
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 105);
+            this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1282, 648);
+            this.panel2.Size = new System.Drawing.Size(1300, 700);
             this.panel2.TabIndex = 14;
             // 
             // MainSeller
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(42)))), ((int)(((byte)(91)))));
-            this.ClientSize = new System.Drawing.Size(1282, 753);
+            this.ClientSize = new System.Drawing.Size(1300, 800);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
@@ -218,7 +198,6 @@
         private System.Windows.Forms.Button btnFloor1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox cbbStatus1;
-        private CustomComboBox cbbStatus;
+        private System.Windows.Forms.ComboBox cbbStatus;
     }
 }

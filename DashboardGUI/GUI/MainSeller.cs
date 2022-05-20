@@ -21,7 +21,7 @@ namespace DashboardGUI
         int Floor = 0;
         void SetTable(Panel pn, TableView tb, int id, int fl, bool st)
         {
-            tb.Width = 300;
+            tb.Width = 250;
             tb.Height = 200;
             pn.Controls.Add(tb);
             tb.IDTable = id;
@@ -30,13 +30,11 @@ namespace DashboardGUI
             tb.GUITable();
             //tb.Visible = true;
         }
-
-        void LoadTable()
+        void LoadTableWithStatusAndFloor(bool st, int fl)
         {
-
-            TableView[] tb = new TableView[QLTableBLL.Instance.NumberOfStatus(statustb)];
+            TableView[] tb = new TableView[QLTableBLL.Instance.NumberOfStatusAndFloor(statustb, fl)];
             int dem1 = 0;
-            foreach (string i in QLTableBLL.Instance.GetListTableStatus2(statustb))
+            foreach (string i in QLTableBLL.Instance.GetListTableStatusAndFloor(statustb, fl))
             {
                 tb[dem1] = new TableView();
                 tb[dem1].IDTable = QLTableBLL.Instance.GetSVByIDTbale(Convert.ToInt32(i.ToString())).IDTable;
@@ -44,7 +42,7 @@ namespace DashboardGUI
                 tb[dem1].statusTable = QLTableBLL.Instance.GetSVByIDTbale(Convert.ToInt32(i.ToString())).Status;
                 dem1++;
             }
-            int soluongban = QLTableBLL.Instance.NumberOfStatus(statustb);
+            int soluongban = QLTableBLL.Instance.NumberOfStatusAndFloor(statustb, fl);
             for (int i = 0; i < soluongban; i++)
             {
 
@@ -54,19 +52,63 @@ namespace DashboardGUI
                 for (int i = 0; i < tb.Length; i++)
                 {
                     int Lx = 0, Ly = 0;
-                    if (i % 3 == 0) Lx = 20;
-                    else if (i % 3 == 1)
+                    if (i % 4 == 0) Lx = 20;
+                    else if (i % 4 == 1)
                     {
-                        Lx = 420;
+                        Lx = 330;
                     }
-                    else if (i % 3 == 2)
+                    else if (i % 4 == 2)
                     {
-                        Lx = 820;
+                        Lx = 630;
                     }
-                    int thuong = Convert.ToInt32(i / 3);
+                    else if (i % 4 == 3)
+                    {
+                        Lx = 930;
+                    }
+                    int thuong = Convert.ToInt32(i / 4);
                     Ly = 25 + 260 * thuong;
                     tb[i].SetLocation(Lx, Ly);
-                    Console.WriteLine(tb[i].IDTable + " " + Ly + " " + Lx);
+                    //Console.WriteLine(tb[i].IDTable + " " + Ly + " " + Lx);
+                    SetTable(panel2, tb[i], tb[i].IDTable, Floor, tb[i].statusTable);
+                }
+            }
+        }
+        void LoadAllTableWithFloor(int fl)
+        {
+            int soban = QLTableBLL.Instance.NumberOfStatusAndFloor(true, fl) + QLTableBLL.Instance.NumberOfStatusAndFloor(false, fl);
+            TableView[] tb = new TableView[soban];
+            int dem1 = 0;
+            foreach (string i in QLTableBLL.Instance.GetAllTableWithFloor(fl))
+            {
+                tb[dem1] = new TableView();
+                tb[dem1].IDTable = QLTableBLL.Instance.GetSVByIDTbale(Convert.ToInt32(i.ToString())).IDTable;
+                tb[dem1].Floor = QLTableBLL.Instance.GetSVByIDTbale(Convert.ToInt32(i.ToString())).Floor;
+                tb[dem1].statusTable = QLTableBLL.Instance.GetSVByIDTbale(Convert.ToInt32(i.ToString())).Status;
+                dem1++;
+            }
+            int soluongban = soban;
+            if (soluongban != 0)
+            {
+                for (int i = 0; i < tb.Length; i++)
+                {
+                    int Lx = 0, Ly = 0;
+                    if (i % 4 == 0) Lx = 20;
+                    else if (i % 4 == 1)
+                    {
+                        Lx = 330;
+                    }
+                    else if (i % 4 == 2)
+                    {
+                        Lx = 630;
+                    }
+                    else if (i % 4 == 3)
+                    {
+                        Lx = 930;
+                    }
+                    int thuong = Convert.ToInt32(i / 4);
+                    Ly = 25 + 260 * thuong;
+                    tb[i].SetLocation(Lx, Ly);
+                    //Console.WriteLine(tb[i].IDTable + " " + Ly + " " + Lx);
                     SetTable(panel2, tb[i], tb[i].IDTable, Floor, tb[i].statusTable);
                 }
             }
@@ -74,13 +116,15 @@ namespace DashboardGUI
         private void btnFloor1_Click(object sender, EventArgs e)
         {
             Floor = 1;
-            //LoadTable();
+            RemoveTable();
+            LoadTableWithStatusAndFloor(statustb, Floor);
         }
 
         private void btnFloor2_Click(object sender, EventArgs e)
         {
             Floor = 2;
-            //LoadTable();
+            RemoveTable();
+            LoadTableWithStatusAndFloor(statustb, Floor);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -90,7 +134,7 @@ namespace DashboardGUI
 
         private void MainSeller_Load(object sender, EventArgs e)
         {
-            LoadTable();
+            LoadTableWithStatusAndFloor(statustb, Floor);
         }
 
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
@@ -100,19 +144,23 @@ namespace DashboardGUI
         bool statustb;
         private void cbbStatus_OnSelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbbStatus1.SelectedIndex == 1)
+            if (cbbStatus.SelectedIndex == 1)
             {
                 statustb = true;
                 RemoveTable();
-                LoadTable();
+                LoadTableWithStatusAndFloor(statustb, Floor);
             }
-            else if (cbbStatus1.SelectedIndex == 2)
+            else if (cbbStatus.SelectedIndex == 2)
             {
                 statustb = false;
                 RemoveTable();
-                LoadTable();
+                LoadTableWithStatusAndFloor(statustb, Floor);
             }
-            else if (cbbStatus1.SelectedIndex == 0) { }
+            else if (cbbStatus.SelectedIndex == 0)
+            {
+                RemoveTable();
+                LoadAllTableWithFloor(Floor);
+            }
         }
         void RemoveTable()
         {

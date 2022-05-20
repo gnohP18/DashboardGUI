@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DashboardGUI
@@ -18,7 +13,7 @@ namespace DashboardGUI
             CreateDemoEmployee();
             CreateAPictureForShift();
         }
-        DataTable dt=new DataTable();
+        DataTable dt = new DataTable();
         void CreateDemoEmployee()
         {
             Bitmap imgTick = new Bitmap(@"E:\GUI\Icon For GUI\ImgRed.jpg");
@@ -46,7 +41,7 @@ namespace DashboardGUI
             DataGridViewImageColumn imageCol1 = new DataGridViewImageColumn();
             DataGridViewImageColumn imageCol2 = new DataGridViewImageColumn();
             DataGridViewImageColumn imageCol3 = new DataGridViewImageColumn();
-            dgvEmployee.Columns.Add("Ten","ten");
+            dgvEmployee.Columns.Add("Ten", "ten");
             dgvEmployee.Columns.Add(imageCol);
             dgvEmployee.Columns[1].HeaderText = "T2S";
             dgvEmployee.Columns.Add(imageCol1);
@@ -60,7 +55,7 @@ namespace DashboardGUI
                 dgvEmployee.Rows.Add();
                 for (int j = 1; j < 5; j++)
                 {
-                    dgvEmployee.Rows[i].Cells[0].Value=dt.Rows[i][0].ToString();
+                    dgvEmployee.Rows[i].Cells[0].Value = dt.Rows[i][0].ToString();
                     if (dt.Rows[i][j].Equals(true))
                     {
                         dgvEmployee.Rows[i].Cells[j].Value = imgTick;
@@ -76,7 +71,7 @@ namespace DashboardGUI
         }
         void CreateAPictureForShift()
         {
-            
+
             //dgvEmployee.DataSource = dt;
         }
     }

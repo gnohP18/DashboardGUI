@@ -35,18 +35,18 @@
             // dgvEmployee
             // 
             this.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmployee.Location = new System.Drawing.Point(37, 26);
+            this.dgvEmployee.Location = new System.Drawing.Point(35, 42);
             this.dgvEmployee.Name = "dgvEmployee";
             this.dgvEmployee.RowHeadersWidth = 51;
             this.dgvEmployee.RowTemplate.Height = 24;
-            this.dgvEmployee.Size = new System.Drawing.Size(708, 372);
+            this.dgvEmployee.Size = new System.Drawing.Size(1209, 535);
             this.dgvEmployee.TabIndex = 0;
             // 
             // DemoDataGriviewImportImage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1275, 632);
             this.Controls.Add(this.dgvEmployee);
             this.Name = "DemoDataGriviewImportImage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

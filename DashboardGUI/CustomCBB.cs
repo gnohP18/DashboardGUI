@@ -12,5 +12,10 @@ namespace DashboardGUI
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, System.EventArgs e)
+        {
+            lbltextsearch.Text = txtDemo.Text;
+        }
     }
 }
